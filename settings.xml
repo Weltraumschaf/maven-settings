@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
+
+    <!--
+        This is the (absolute given, local) folder, where maven loads its jars (the dependencies) to.
+
+        Replace USER_HOME with your user home directory. (On Windows you can use: ${env.USERPROFILE}).
+
+        @see https://maven.apache.org/settings.html#Simple_Values
+      -->
+    <localRepository>USER_HOME/.m2/repository</localRepository>
+
+    <!-- true if Maven should attempt to interact with the user for input, false if not. Defaults to true -->
+    <interactiveMode>true</interactiveMode>
+
+    <!-- 
+        true if this build system should operate in offline mode, defaults to false. This element is useful 
+        for build servers which cannot connect to a remote repository, either because of network setup or security reasons. 
+    -->
+    <offline>false</offline>
+
+    <!--
+        A mirror defines a server, where you want to download dependencies from.
+        Keep in mind that mirrorOf and mirrorOfLayout define an AND conjunction for a matching repository in the poms.
+        @see https://maven.apache.org/guides/mini/guide-mirror-settings.html
+    -->
+    <mirrors/>
+
+    <profiles/>
+    
+    <!--
+       Configuration of server-specific settings, mainly authentication method. This allows configuration of authentication on a per-server basis.
+       This is not used on client side (local machine), but only on ci-server (jenkins)
+       @see https://maven.apache.org/settings.html#Servers
+    -->
+    <servers/>
+
+    <!--
+        This is used to let maven run with special plugins via commandline without givin the complete group id of the plugin
+        This is usually not needed.
+        @see https://maven.apache.org/settings.html#Plugin_Groups
+    -->
+    <pluginGroups>
+        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+    </pluginGroups>
+
+    <!-- Proxy definitions: @see https://maven.apache.org/settings.html#Proxies -->
+    <proxies/>
+
+</settings>
