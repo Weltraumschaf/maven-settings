@@ -10,7 +10,7 @@
 
         @see https://maven.apache.org/settings.html#Simple_Values
       -->
-    <localRepository>USER_HOME/.m2/repository</localRepository>
+    <localRepository>${env.HOME}/.m2/repository</localRepository>
 
     <!-- true if Maven should attempt to interact with the user for input, false if not. Defaults to true -->
     <interactiveMode>true</interactiveMode>
